@@ -1,0 +1,7 @@
+{
+  "name": "interesting",
+  "private": true,
+  "dependencies": {
+    "normalize.css": "~3.0.2"
+  }
+}

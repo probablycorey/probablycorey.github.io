@@ -1,0 +1,63 @@
+@import url(http://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic,700|Open+Sans:300,400,600,700,800);
+body, html {
+  font-family: 'Old Standard', serif;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.background {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: #000;
+
+  .image {
+    width: 100%;
+    height: 100%;
+    background: url("/images/hotdogs.jpg") no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.25;
+  }
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1, h2, h3 {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 8vw;
+  color: #4ECDC4;
+  font-weight: 700;
+  line-height: 0.9;
+}
+
+h2 {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-size: 3.1vw;
+  color: #ddd;
+
+  letter-spacing: 0.13rem;
+  font-weight: 400;
+  font-style: italic;
+}
