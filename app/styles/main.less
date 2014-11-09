@@ -1,33 +1,16 @@
-@import url(http://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic,700|Open+Sans:300,400,600,700,800);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Gentium+Book+Basic:400,400italic);
 body, html {
-  font-family: 'Old Standard', serif;
+  font-family: 'Open Sans', sans-serif;
   width: 100%;
   height: 100%;
   overflow: hidden;
-}
-
-.background {
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  background: #000;
-
-  .image {
-    width: 100%;
-    height: 100%;
-    background: url("/images/hotdogs.jpg") no-repeat center center fixed;
-    background-size: cover;
-    opacity: 0.25;
-  }
 }
 
 .container {
   position: relative;
   width: 100%;
   height: 100%;
+  background: #9CBD82;
 }
 
 .title {
@@ -45,19 +28,120 @@ h1, h2, h3 {
 h1 {
   text-align: center;
   font-size: 8vw;
-  color: #4ECDC4;
-  font-weight: 700;
-  line-height: 0.9;
+  color: #ddd;
+  font-weight: 800;
+  line-height: 1.0;
 }
 
 h2 {
+  font-family: 'Gentium Book Basic', serif;
   text-align: center;
   padding: 0;
   margin: 0;
-  font-size: 3.1vw;
-  color: #ddd;
+  font-size: 2.9vw;
+  color: #222;
 
-  letter-spacing: 0.13rem;
+  letter-spacing: 0.15rem;
   font-weight: 400;
   font-style: italic;
+}
+
+
+.header {
+  text-align: center;
+  font-size: 2vw;
+  color: #222;
+  font-weight: 400;
+}
+
+a {
+  color: #222;
+  text-decoration: none;
+}
+
+a:hover {
+  border-bottom: 2px solid #FF6529;
+}
+
+/* Requires data-text="[TEXT]" on target html */
+
+.gt {
+  position:relative;
+  z-index:9999;
+  position:relative;
+  transition: none;
+}
+
+@keyframes color-shift {
+  .loop(20);
+}
+
+.loop(@n, @i: 0) when (@i =< @n) {
+  @p: percentage(@i/@n);
+  @shiftX: `(Math.random()*3)`;
+  @shiftY: `(Math.random()*3)`;
+  @blackX: `(Math.random()*4)-2`;
+  @blackY: `(Math.random()*4)-2`;
+
+  @{p} {
+    text-shadow: ~"@{blackX}px" ~"@{blackY}px" rgba(255,255,255,0.8), ~"-@{shiftX}px" ~"-@{shiftY}px" #00CDC6, ~"@{shiftX}px" ~"@{shiftY}px" #CB0000;
+    color: transparent;
+  }
+
+  .loop(@n, (@i + 1));   // next iteration
+}
+
+@keyframes noise {
+  .noise-loop(20);
+}
+
+
+@keyframes noise-2 {
+  .noise-loop(20);
+}
+
+.noise-loop(@n, @i: 0) when (@i =< @n) {
+  @p: percentage(@i/@n);
+  @x: `(Math.random()*100)+0`;
+  @y: `(Math.random()*100)+0`;
+  @opacity: `Math.random()`;
+
+  @{p} {
+    clip:rect(~"@{x}px",9999px,~"@{y}px",0);
+    color: rgba(100,100,100,@opacity);
+  }
+
+  .noise-loop(@n, (@i + 1));   // next iteration
+}
+
+.clip(@color, @bg) {
+  &:after {
+    content:attr(data-text);
+    position:absolute;
+    left:4px;
+
+    top:0;
+    background: transparent;
+    overflow:hidden;
+    clip:rect(20px,9999px,30px,0);
+
+    animation: noise 2s infinite linear alternate-reverse;
+  }
+
+  &:before {
+    content:attr(data-text);
+    position:absolute;
+    left:-3px;
+
+    top:0;
+    overflow:hidden;
+    clip:rect(70px,9999px,90px,0);
+
+    animation: noise-2 20s infinite linear alternate-reverse;
+  }
+}
+
+h1:hover {
+  .clip(#fff, #9CBD82);
+  animation: color-shift 2s infinite;
 }
