@@ -1,0 +1,59 @@
+/* Use data-text="TEXT" on elements that use the .glitch class */
+.glitch {
+  position: relative;
+  .clip();
+}
+
+@keyframes glitch {
+  0%, 97.9% { color: inherit;}
+  98%, 100% { color: transparent;}
+}
+
+@keyframes noise {
+  0%, 97.9% {color: transparent;}
+  .noise-loop(20);
+}
+
+@keyframes noise-2 {
+  0%, 97.9% {color: transparent;}
+  .noise-loop(20);
+}
+
+.noise-loop(@n, @i: 0) when (@i =< @n) {
+  @p: percentage(0.98 + (@i/@n) * 0.02);
+  @clipTop: `(Math.random()*2)`;
+  @clipBottom: `(Math.random()*3)`;
+  @opacity: `(Math.random()*0.5)+0.5`;
+  @skew: `(Math.random())`;
+  @translate: `(Math.random()*0.2)-0.1`;
+
+  @{p} {
+    opacity: @opacity;
+    color: inherit;
+    clip: rect(~"@{clipTop}rem",9999px,~"@{clipBottom}rem",0);
+  }
+
+  .noise-loop(@n, (@i + 1));
+}
+
+.clip() {
+  animation: glitch 10s infinite linear alternate;
+
+  &:after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0.1rem;
+    top: 0;
+
+    animation: noise 10s infinite linear alternate;
+  }
+
+  &:before {
+    content: attr(data-text);
+    position: absolute;
+    left: -0.1rem;
+    top: 0;
+
+    animation: noise-2 10s infinite linear alternate;
+  }
+}
