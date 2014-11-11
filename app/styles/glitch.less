@@ -23,13 +23,8 @@
   @p: percentage(0.98 + (@i/@n) * 0.02);
   @clipTop: `(Math.random()*2)`;
   @clipBottom: `(Math.random()*3)`;
-  @opacity: `(Math.random()*0.5)+0.5`;
-  @skew: `(Math.random())`;
-  @translate: `(Math.random()*0.2)-0.1`;
 
   @{p} {
-    opacity: @opacity;
-    color: white;
     clip: rect(~"@{clipTop}rem",9999px,~"@{clipBottom}rem",0);
   }
 
@@ -44,6 +39,7 @@
     position: absolute;
     left: 0.1rem;
     top: 0;
+    color: #eee;
 
     animation: noise 10s infinite linear alternate;
   }
@@ -53,6 +49,7 @@
     position: absolute;
     left: -0.1rem;
     top: 0;
+    color: #fff;
 
     animation: noise-2 10s infinite linear alternate;
   }

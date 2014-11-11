@@ -1,0 +1,61 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Gentium+Book+Basic:400,400italic);
+body,
+html {
+  font-family: 'Open Sans', sans-serif;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #60BFAE;
+}
+.header {
+  text-align: center;
+  font-size: 2vw;
+  color: #222;
+  font-weight: 600;
+}
+a,
+a:visited {
+  color: #222;
+  text-decoration: none;
+}
+a:hover {
+  border-bottom: 2px solid white;
+  text-decoration: none;
+}
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+h1,
+h2,
+h3 {
+  padding: 0;
+  margin: 0;
+}
+h1 {
+  text-align: center;
+  font-size: 8vw;
+  color: #D4D959;
+  font-weight: 800;
+  line-height: 1.0;
+}
+h2 {
+  font-family: 'Gentium Book Basic', serif;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-size: 2.9vw;
+  color: #222;
+  letter-spacing: 0.15rem;
+  font-weight: 400;
+  font-style: italic;
+}
