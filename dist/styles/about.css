@@ -6278,10 +6278,11 @@ html {
   background: #60BFAE;
 }
 .header {
+  margin-top: 0.5rem;
   text-align: center;
-  font-size: 2vw;
+  font-size: 2rem;
   color: #222;
-  font-weight: 600;
+  font-weight: 300;
 }
 a,
 a:visited {
@@ -6298,8 +6299,13 @@ a:hover {
 i {
   vertical-align: middle;
 }
+a {
+  vertical-align: middle;
+}
+a:hover {
+  border: none;
+}
 .avatar {
-  background: #eee;
   text-align: center;
 }
 .about {
@@ -6323,12 +6329,6 @@ i {
 .vanity {
   text-align: center;
   font-size: 10rem;
-}
-.vanity a {
-  vertical-align: middle;
-}
-.vanity a:hover {
-  border: none;
 }
 .vanity .github {
   background: #666;
