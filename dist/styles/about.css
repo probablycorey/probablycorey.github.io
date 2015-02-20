@@ -6274,7 +6274,6 @@ html {
   font-family: 'Open Sans', sans-serif;
   width: 100%;
   height: 100%;
-  overflow: hidden;
   background: #60BFAE;
 }
 .header {
@@ -6305,23 +6304,29 @@ a {
 a:hover {
   border: none;
 }
+.row {
+  text-align: center;
+  margin-left: 25%;
+  margin-right: 25%;
+}
 .avatar {
   text-align: center;
 }
 .about {
+  border-radius: 1rem 1rem 0 0;
   background: #111;
   color: #eee;
   padding: 2rem;
   text-align: center;
   font-size: 3rem;
 }
-.daughter {
+.about .daughter {
   font-size: 2rem;
 }
-.random-color {
+.about .random-color {
   border-radius: 1rem;
 }
-.random-color .random-color-name {
+.about .random-color .random-color-name {
   padding: 0 0.5rem;
   -webkit-filter: invert(1);
           filter: invert(1);
@@ -6329,20 +6334,28 @@ a:hover {
 .vanity {
   text-align: center;
   font-size: 10rem;
+  background: blue;
+  margin-bottom: 10rem;
 }
 .vanity .github {
+  float: left;
+  width: 33.33333%;
   background: #666;
 }
 .vanity .github:hover {
   background: #4181C6;
 }
 .vanity .twitter {
+  float: left;
+  width: 33.33333%;
   background: #999;
 }
 .vanity .twitter:hover {
   background: #61CCF2;
 }
 .vanity .linkedin {
+  float: left;
+  width: 33.33333%;
   background: #ccc;
 }
 .vanity .linkedin:hover {
