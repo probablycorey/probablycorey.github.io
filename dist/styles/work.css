@@ -6507,39 +6507,10 @@ a:hover {
 .header {
   margin-bottom: 4rem;
 }
-i {
-  vertical-align: middle;
-}
-a {
-  vertical-align: middle;
-}
-a#giant-hotdog:hover {
-  border: none;
-}
 .row {
-  text-align: center;
   margin-left: 25%;
   margin-right: 25%;
 }
 .avatar {
   text-align: center;
-}
-.about {
-  border-radius: 0.5rem;
-  background: #B2EBF2;
-  color: #111;
-  padding: 2rem;
-  text-align: center;
-  font-size: 3rem;
-}
-.about .daughter {
-  font-size: 2rem;
-}
-.about .random-color {
-  border-radius: 0.5rem;
-}
-.about .random-color .random-color-name {
-  padding: 0 0.5rem;
-  -webkit-filter: invert(1);
-          filter: invert(1);
 }

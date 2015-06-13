@@ -5,24 +5,24 @@
 }
 
 @keyframes glitch {
-  0%, 97.9% { color: inherit;}
-  98%, 100% { color: transparent;}
+  0%, 90% { color: inherit;}
+  91%, 100% { color: transparent;}
 }
 
 @keyframes noise {
-  0%, 97.9% {color: transparent;}
+  0%, 90% {color: transparent;}
   .noise-loop(20);
 }
 
 @keyframes noise-2 {
-  0%, 97.9% {color: transparent;}
+  0%, 90% {color: transparent;}
   .noise-loop(20);
 }
 
 .noise-loop(@n, @i: 0) when (@i =< @n) {
   @p: percentage(0.98 + (@i/@n) * 0.02);
-  @clipTop: `(Math.random()*2)`;
-  @clipBottom: `(Math.random()*3)`;
+  @clipTop: `(Math.random()*3)`;
+  @clipBottom: `(Math.random()*4)`;
 
   @{p} {
     clip: rect(~"@{clipTop}rem",9999px,~"@{clipBottom}rem",0);
@@ -32,16 +32,16 @@
 }
 
 .clip() {
-  animation: glitch 10s infinite linear alternate;
+  animation: glitch 3s infinite linear alternate;
 
   &:after {
     content: attr(data-text);
     position: absolute;
     left: 0.1rem;
     top: 0;
-    color: #eee;
+    color: #bbb;
 
-    animation: noise 10s infinite linear alternate;
+    animation: noise 3s infinite linear alternate;
   }
 
   &:before {
@@ -51,6 +51,6 @@
     top: 0;
     color: #fff;
 
-    animation: noise-2 10s infinite linear alternate;
+    animation: noise-2 3s infinite linear alternate;
   }
 }
