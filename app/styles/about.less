@@ -1,49 +1,43 @@
 @import "global.less";
-
-.header {
-  margin-bottom: 4rem;
-}
-
-i {
-  vertical-align: middle;
-}
-
-a {
-  vertical-align: middle;
-}
-
-a#giant-hotdog:hover {
-  border: none;
-}
+@import "font-styles.css";
 
 .row {
-  text-align: center;
-  margin-left: 25%;
-  margin-right: 25%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.avatar {
-  text-align: center;
+.header {
+  margin: 2rem;
+  li {
+    display: inline;
+    padding-right: 1em;
+  }
 }
 
-.about {
+.giant-hotdog {
+  align-self: flex-start;
+  max-width: 25rem;
+
+  img {
+    width: 100%;
+  }
+}
+
+.me {
+  max-width: 25rem;
+  padding: 1rem;
+
   border-radius: 0.5rem;
   background: #B2EBF2;
   color: #111;
-  padding: 2rem;
-  text-align: center;
-  font-size: 3rem;
+  font-size: 2rem;
 
   .daughter {
-    font-size: 2rem;
+    font-size: 1rem;
   }
+}
 
-  .random-color {
-    border-radius: 0.5rem;
-
-    .random-color-name {
-      padding: 0 0.5rem;
-      filter: invert(1);
-    }
-  }
+.work-history {
+  max-width: 50rem;
 }
