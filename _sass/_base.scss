@@ -1,0 +1,53 @@
+/*
+
+Color Palette
+
+#FBFCEE
+#F0DEB8
+#9EC455
+#1E1824
+#777060
+
+*/
+
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #1E1824;
+  color: #FBFCEE;
+  padding-top: 3rem;
+  padding-left: 5rem;
+  font-size: 2rem;
+}
+
+h1 {
+  font-size: 6rem;
+  padding: 2rem 0;
+}
+
+h2 {
+  font-size: 4rem;
+  padding-bottom: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: #9EC455;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.this-is-your-life {
+  padding-top: 4rem;
+
+  ul {
+    padding-top: 0.5rem;
+  }
+
+  li {
+    font-size: 2rem;
+    padding: 0.5rem 2rem;
+  }
+}
